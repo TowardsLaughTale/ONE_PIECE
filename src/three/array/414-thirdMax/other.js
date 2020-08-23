@@ -1,3 +1,48 @@
+let thirdMax = function(nums) {
+    if (nums.length === 0) return nums[0]
+    let max = 0
+    let obj = {}
+    // 1、遍历得到最大值
+    // 2、使用 obj 设置 key 方式去重
+    for (let i = 0; i < nums.length; i++) {
+        const element = nums[i];
+        if (max < element) {
+            max = element
+        }
+        if (!obj[element]) {
+            obj[element] = 1
+        }
+    }
+    let arr = Object.keys(obj)
+    // 数组长度大于 3，则取倒序第三个值，即为第三大
+    if (arr.length >= 3) {
+        return arr.sort((a,b) => {
+            return b - a
+        })[2]
+    }
+    // 否则取最大值
+    return max
+}
+
+
+let thirdMax = function(nums) {
+    // set 去重
+    let list = [...new Set(nums)]
+
+    // 倒序排序
+    list = list.sort((a, b) => {
+        return b - a
+    })
+
+    // 数组长度大于 3，则取第三个值
+    if (list.length >= 3) {
+        return list[2]
+    }
+    // 否则取第一个值，即为最大值
+    return list[0]
+}
+
+
 // 作者：yunfeihe
 let thirdMax = function(nums) {
     // 数组长度小于 3， 直接返回最大值
@@ -34,3 +79,13 @@ let thirdMax = function(nums) {
     if (max3 === -Infinity || max2 === -Infinity || max1 === -Infinity) return Math.max(max1, max2, max3) 
     return max3 //直接返回正确答案
 }
+
+
+
+let nums = [3, 2, 1]
+// let nums = [1, 2]
+// let nums = [2,2,3,1]
+
+
+let r = thirdMax(nums)
+console.log('r :>> ', r)
