@@ -18,7 +18,7 @@ var findMaxConsecutiveOnesV1 = function (nums) {
 }
 
 var findMaxConsecutiveOnesV2 = function (nums) {
-  //转换成字符串
+  //考虑到元素的特殊性，转换成字符串
   //以0分割成元素值只有1的数组
   //数组排序,并取出最后一个最大的元素值，即长度最长的1
   return nums.join('').split(0).sort().pop().length

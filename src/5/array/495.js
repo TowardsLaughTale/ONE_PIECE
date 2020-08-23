@@ -7,28 +7,21 @@
 // [1,4] 2
 // [1,2,3,4] 1
 var findPoisonedDuration = function (timeSeries, duration) {
-  var res = 0
-  for (var i = 0; i < timeSeries.length; i++) {
-    if (timeSeries[i] == duration) {
-      res = res + duration
-    } else if (timeSeries[i] < duration) {
-      res = res + duration - timeSeries[i]
-    } else if (
-      i + 1 <= timeSeries.length &&
-      i - 1 >= 0 &&
-      timeSeries[i] > res + timeSeries[i - 1]
-    ) {
-      res = res + duration
-      console.log('res ', res)
+  if (timeSeries.length === 0) return 0
+  let res = 0
+  // 记录上次开始时间
+  let endTime = timeSeries[0]
+  for (const time of timeSeries) {
+    //当前时间和上次时间比较，小于间隔时间则表示中毒有叠加
+    //总中毒时间加上叠加的时间就是目前总中毒时间
+    //叠加时间是time-endTime
+    if (time - endTime < duration) {
+      res += time - endTime
+    } else {
+      res += duration
     }
-    // else if (
-    //   i - 1 >= 0 &&
-    //   i + 1 <= timeSeries.length &&
-    //   timeSeries[i] + res > timeSeries[i + 1]
-    // ) {
-    //   res = res + timeSeries[i + 1] - timeSeries[i]
-    //   console.log('left ', res)
-    // }
+    endTime = time
   }
-  return res
+  //最后一个时间点直接加间隔时间，不管最后一个时间点是否和之前一个时间点有叠加
+  return res + duration
 }
