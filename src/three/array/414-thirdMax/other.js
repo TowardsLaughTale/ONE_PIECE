@@ -32,7 +32,7 @@ let thirdMax = function(nums) {
     // set 去重
     let list = [...new Set(nums)]
 
-    // 倒序排序
+    // 倒序排序  nlogn
     list = list.sort((a, b) => {
         return b - a
     })

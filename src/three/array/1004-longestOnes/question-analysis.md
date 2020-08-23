@@ -37,22 +37,3 @@ A[i] 为 0 或 1
 >来源：力扣（LeetCode）<br>
 链接：https://leetcode-cn.com/problems/max-consecutive-ones-iii/<br>
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
-
-<br>
-
-### 解题思路
-```javascript
-1、
-```
-
-<br>
-
-### 题解
-```javascript
-// 用时一般，内存消耗一般
-执行用时: 72 ms
-内存消耗: 34.6 MB
-```
-
-<br>
