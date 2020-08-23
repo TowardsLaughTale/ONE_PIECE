@@ -1,3 +1,5 @@
+// 执行用时：92 ms, 在所有 JavaScript 提交中击败了32.06%的用户
+// 内存消耗：40.6 MB, 在所有 JavaScript 提交中击败了8.39%的用户
 let thirdMax = function(nums) {
     if (nums.length === 0) return nums[0]
     let max = 0
@@ -24,7 +26,8 @@ let thirdMax = function(nums) {
     return max
 }
 
-
+// 执行用时：84 ms, 在所有 JavaScript 提交中击败了56.05%的用户
+// 内存消耗：39.8 MB, 在所有 JavaScript 提交中击败了53.15%的用户
 let thirdMax = function(nums) {
     // set 去重
     let list = [...new Set(nums)]
@@ -44,6 +47,8 @@ let thirdMax = function(nums) {
 
 
 // 作者：yunfeihe
+// 执行用时：76 ms, 在所有 JavaScript 提交中击败了81.32%的用户
+// 内存消耗：39.8 MB, 在所有 JavaScript 提交中击败了51.05%的用户
 let thirdMax = function(nums) {
     // 数组长度小于 3， 直接返回最大值
     if (nums.length < 3) return Math.max(...nums)

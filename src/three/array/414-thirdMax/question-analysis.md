@@ -46,35 +46,3 @@
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 <br>
-
-### 解题思路
-```javascript
-1、去重
-2、倒序排序
-3、
-    若数组元素大于 3 个，则取第三个元素返回
-    小于三个，直接取第一个最大值
-```
-
-<br>
-
-### 题解
-```javascript
-// 用时一般，内存消耗一般
-执行用时: 72 ms
-内存消耗: 34.6 MB
-
-let thirdMax = function(nums) {
-    let list = [...new Set(nums)]
-    list = list.sort((a, b) => {
-        return b - a
-    })
-    if (list.length >= 3) {
-        return list[2]
-    } else {
-        return list[0]
-    }
-}
-```
-
-<br>
