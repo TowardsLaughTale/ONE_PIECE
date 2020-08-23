@@ -9,6 +9,9 @@
  * @param {number[]} nums
  * @return {number}
  */
+// 83/83 cases passed (140 ms)
+// Your runtime beats 31.58 % of javascript submissions
+// Your memory usage beats 86.84 % of javascript submissions (39.5 MB)
 //! 排序后取前后各三个数的乘积的最大值 
 var maximumProduct = function(nums) {
     nums.sort((a,b)=>a-b);
