@@ -1,3 +1,5 @@
+// 执行用时：108 ms, 在所有 JavaScript 提交中击败了17.20%的用户
+// 内存消耗：40.2 MB, 在所有 JavaScript 提交中击败77.85%的用户
 let findMaxConsecutiveOnes = function(nums) {
     let maxCount = 0
     let count = 0
@@ -15,3 +17,9 @@ let findMaxConsecutiveOnes = function(nums) {
     })
     return maxCount
 }
+
+// let x = [1,1,0,1,1,1]
+let arr = [0]
+
+let r = findMaxConsecutiveOnes(arr)
+console.log('r :>> ', r)
