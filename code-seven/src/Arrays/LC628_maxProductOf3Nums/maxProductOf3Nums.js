@@ -13,9 +13,7 @@ var maximumProduct = function(nums) {
     const sorted = [...nums.sort((a,b)=>a-b)];
     let len = sorted.length;
     //判断三个数乘积最大的策略：俩负数最大加一个正数最大，或者三个正数最大
-    return sorted[0] * sorted[1] * sorted[len - 1] > sorted[len - 1] * sorted[len - 2] * sorted[len - 3]? 
-            sorted[0] * sorted[1] * sorted[len - 1] : 
-            sorted[len - 1] * sorted[len - 2] * sorted[len - 3]
+    return Math.max(sorted[0] * sorted[1] * sorted[len - 1],sorted[len - 1] * sorted[len - 2] * sorted[len - 3])
 }
 
 
