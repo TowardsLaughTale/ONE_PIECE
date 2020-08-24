@@ -29,4 +29,4 @@ var findPoisonedDuration = (timeSeries, duration) => {
 //   最后一次肯定会中毒，所以直接加上中毒时间duration
   return res + duration;
 };
-console.log(findPoisonedDuration([1, 4], 2));
+console.log(findPoisonedDuration([1,2, 4,5], 2));

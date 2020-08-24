@@ -46,7 +46,7 @@ const longestOnes = (A, K) => {
           time++;
           // 如果本次是不相同的，减少滑动次数
           if (A[slide] !== 1) {
-            replaceTime--;w
+            replaceTime--;
           }
         }
   
