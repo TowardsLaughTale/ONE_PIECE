@@ -16,7 +16,7 @@
 - 运行结果（leetcode）
 - 代码实现
 
-注释生成是使用的`vscode`的[koro1FileHeader](https://github.com/OBKoro1/koro1FileHeader)注释插件，相关配置已放在`settings/vscde.json`下，安装插件后复制其内容放在`vscode`的配置文件下即可，其中已关闭了大部分全局相关的功能。只需要修改作者名为本人即可：
+注释生成建议可以使用`vscode`的[koro1FileHeader](https://github.com/OBKoro1/koro1FileHeader)注释插件，相关配置已放在`settings/vscde.json`下，安装插件并在**工作区启用**后复制其内容放在`vscode`的配置文件下即可，其中已关闭了大部分全局相关的功能。只需要修改作者名为本人即可：
 ```json
     // 头部注释
     "fileheader.customMade": {
