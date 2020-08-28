@@ -36,7 +36,7 @@ nums[i] 是一个在0到49,999范围内的整数。
  */
 var findShortestSubArray = function(nums) {
     //nums > 0 not null
-    //one pass, use map to keep track of <value, position[]> pairs, 
+    //use map to keep track of <value, position[]> pairs, 
     //the min length of subarray is last index - first index + 1 of the value with the max degree 
         const map = new Map();
         let max_degree = Number.MIN_SAFE_INTEGER;
