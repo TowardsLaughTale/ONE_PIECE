@@ -31,7 +31,8 @@ let findShortestSubArray = function(nums) {
     return y + 1
 }
 
-
+// 执行用时：108 ms, 在所有 JavaScript 提交中击败了76.49%的用户
+// 内存消耗：41.3 MB, 在所有 JavaScript 提交中击败了81.14%的用户
 const findShortestSubArray = (nums) => {
     const counts = {}
     const firstIndexes = {}
@@ -53,7 +54,7 @@ const findShortestSubArray = (nums) => {
         }
     }
     return res
-};
+}
 
 // let nums = [1,2,2,3,1,4,2]
 // let nums = [1, 2, 2, 3, 1]
