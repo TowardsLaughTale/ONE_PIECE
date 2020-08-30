@@ -29,7 +29,7 @@
  */
 //in-place哈希，将遍历到的当前value换到index为value - 1的位置上去以做成排序效果，再次遍历“哈希排序”好的数组，当某个位置value - 1不等于当前index时就说明它是缺失的，因为正常在第一步交换完后value - 1 应该等于index
 var firstMissingPositive = function(nums) {
-    //[1,2,0],[3,4,-1,1] -> [-1,4,3,1] -> [-1,1,3,4]
+    //[1,2,0],[3,4,-1,1] -> [-1,4,3,1] -> [-1,1,3,4] -> [1,-1,3,4]
     //[0,1,-1]
     if(!nums || nums.length === 0) return 1;
     for(let i = 0; i < nums.length; i ++ ){//只有正数以及小于数组长度的还有没有排好序的需要换
