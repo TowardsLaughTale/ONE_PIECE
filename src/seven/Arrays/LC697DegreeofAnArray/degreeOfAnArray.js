@@ -29,7 +29,7 @@ nums[i] 是一个在0到49,999范围内的整数。
 
 //思路：创建一个map<num, position[]> 数组的元素和其出现的对应元素，记住degree最大的那个,然后遍历map
 //取degree最大中的距离最小的
-
+//Time Complexity: O(n), Space Complexity: O(n)
 /**
  * @param {number[]} nums
  * @return {number}

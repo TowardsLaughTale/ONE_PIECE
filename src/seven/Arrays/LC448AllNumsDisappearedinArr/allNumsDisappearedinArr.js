@@ -20,6 +20,7 @@
  * @return {number[]}
  */
 //因为数组本应从1-n，那么循环一遍数组，利用index + 1来代表本应有的所有数，看下这些数在不在现在的数组里，如果不在就是那个缺失的数
+//Time Complexity: O(n^2), Space Complexity : O(1)
 var findDisappearedNumbers2 = function(nums) {
     const res = [];
     for(let i = 0; i < nums.length; i ++ ){
@@ -32,6 +33,7 @@ var findDisappearedNumbers2 = function(nums) {
 };
 
 //将nums里面value - 1map成index，把相应index下的数乘-1，然后遍历1-n，找出nums中还是正数的说明没有变过，将其push到结果里
+//Time Complexity: O(n), Space Complexity : O(1)
 var findDisappearedNumbers = function(nums) {
     const res = [];
     nums.forEach(num => {

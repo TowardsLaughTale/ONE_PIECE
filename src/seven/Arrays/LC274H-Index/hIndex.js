@@ -28,6 +28,7 @@ h 指数的定义：h 代表“高引用次数”（high citations），一名�
     //所以h是index而不是数组中的某个数,当index是几的时候满足“题中条件” -> 所以首先排序，
     //找到这样一个index，使得大于citation[index]要大于index，
     //虽然题中说至少是h，但文章数量=index+1,所以citation[index]要大于index而没有等于
+    //Time Complexity: O(nlgn), Space Complexity: O(1)
     var hIndex = function(citations) {
         if(!citations || citations.length === 0) return 0;
 
@@ -40,7 +41,7 @@ h 指数的定义：h 代表“高引用次数”（high citations），一名�
                 break;
             }
         }
-        
+
         if(h === -1) return citations.length;//最后如果执行这步说明所有的文章都至少引用了h次故返回长度
         return h;
     };

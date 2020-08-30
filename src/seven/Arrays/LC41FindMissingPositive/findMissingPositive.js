@@ -28,6 +28,7 @@
  * @return {number}
  */
 //in-place哈希，将遍历到的当前value换到index为value - 1的位置上去以做成排序效果，再次遍历“哈希排序”好的数组，当某个位置value - 1不等于当前index时就说明它是缺失的，因为正常在第一步交换完后value - 1 应该等于index
+//Time Complexity: O(n), Space Complexity: O(1)
 var firstMissingPositive = function(nums) {
     //[1,2,0],[3,4,-1,1] -> [-1,4,3,1] -> [-1,1,3,4] -> [1,-1,3,4]
     //[0,1,-1]
@@ -46,6 +47,7 @@ var firstMissingPositive = function(nums) {
     return nums.length + 1;
 };
 //如果没有空间复杂度要求可以用哈希表，把数组中所有数都加进去，然后按index从1开始遍历哈希表到某个index时值不存在说明这块是缺失的，原理就是把无序的数组加到哈希表里以后能通过再一次有序的循环来达到排序所能带来的查找最小正数的效果
+//Time Complexity: O(n), Space Complexity: O(n)
 // var firstMissingPositive = function(nums) {
 //     const s = new Set();
 //     nums.forEach(num => s.add(num));

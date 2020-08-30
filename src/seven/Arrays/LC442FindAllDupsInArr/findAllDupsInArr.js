@@ -22,6 +22,7 @@
  */
 //跟LC448思路类似，但其实更简单些，一次循环就可以出来而且没有额外空间，in-place哈希
 //遍历数组，将遍历到的数组value作为index去找value所对应的index里的值，并将其乘负一，如果当前值已经是-1了，说明已经遇到value了，就找到重复的了
+//Time Complexity: O(n), Space Complexity: O(1)
 var findDuplicates = function(nums) {
     const res = [];
     for(let num of nums){
