@@ -11,9 +11,6 @@
 nums.length 在1到50,000区间范围内。<br>
 nums[i] 是一个在0到49,999范围内的整数。
 
-循环获取出现频次最大的值
-indexOf lastIndexOf
-
 <br>
 
 ### 示例
