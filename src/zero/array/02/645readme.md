@@ -19,7 +19,7 @@
 * 求出原数组（d为1的等差数列，且n=num.length）的和 减去 去重数组之和 即为丢失项
 
 #### 题解
-``` 
+``` javascript
 var findErrorNums = (nums) => {
     const s = Array.from(new Set(nums)).reduce((x,y)=>x+y)
     return [nums.reduce((x,y)=>x+y)-s, nums.length*(1+nums.length)/2 -s]
