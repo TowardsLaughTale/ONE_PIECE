@@ -21,7 +21,7 @@
 * 找到第一个与[1-n]不符规则的下标 firstIdx，取sortArr[firstIdx]
 
 #### 题解
-``` 
+``` javascript
 var firstMissingPositive = function(nums) {
     // 排序过滤去重=>递增的没有重复项的正整数数组
     const sortArr = nums.sort((a,b)=>a-b).filter((it,idx,arr)=>it>0&&arr.indexOf(it,0)===idx)
