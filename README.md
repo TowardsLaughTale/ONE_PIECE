@@ -46,6 +46,9 @@ Our summary, our learning results, our sharing results, our weapon before the in
 #### 2020年 8月17日~8月21日 主题：数组遍历相关
 Leecode 题号：485，1004，495，414，628
 
+#### 2020年 8月24日~8月28日 主题：统计数组中的元素
+Leecode 题号：645，697，448，442，41，274
+
 ### 2、字符串相关
 
 ### 3、数与位
