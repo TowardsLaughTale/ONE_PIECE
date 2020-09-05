@@ -13,23 +13,33 @@
 给定的数组是无序的。
 
 #### 思路
-* 只有一个元素重复，且原数组从1到n
-* nums去重后为从1到n仅缺丢失项的数组（去重）
-* 当前重复项数组之和 减去 去重数组之和 即为重复项
-* 求出原数组（d为1的等差数列，且n=num.length）的和 减去 去重数组之和 即为丢失项
 
 #### 题解
 ``` javascript
-var findErrorNums = (nums) => {
-    const s = Array.from(new Set(nums)).reduce((x,y)=>x+y)
-    return [nums.reduce((x,y)=>x+y)-s, nums.length*(1+nums.length)/2 -s]
-};
+let findErrorNums = function(nums) {
+    let n = nums.length
+    let dup
+    for (let i = 0; i < n; i++) {
+        let index = Math.abs(nums[i]) - 1
+        // nums[index] 小于 0 则说明重复访问
+        if (nums[index] < 0) {
+            dup = index + 1
+        } else {
+            nums[index] *= -1
+        }
+    }
+    let missing;
+    for (let i = 0; i < n; i++) {
+        // nums[i] 大于 0 则说明没有访问
+        if (nums[i] > 0) {
+            // 将索引转换成元素
+            missing = i + 1
+            break
+        }
+    }
+    return [dup, missing]
+}
 ```
 #### 复杂度
-时间：O(n)
-空间：O(n)
 
 #### 提交结果
-* 49/49 cases passed (104 ms)
-* Your runtime beats 52.38 % of javascript submissions
-* Your memory usage beats 16.19 % of javascript submissions (44.5 MB)
