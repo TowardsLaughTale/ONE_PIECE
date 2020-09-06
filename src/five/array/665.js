@@ -5,6 +5,7 @@
 // [-1,4,2,3]
 // [3,4,2,3]
 // [4,2,3]
+//此种解法不可能同时处理[3,4,2,3] [4,2,3]所以放弃
 var checkPossibilityV1 = function (nums) {
   if (nums.length == 1) {
     return true
@@ -95,6 +96,9 @@ var checkPossibilityV3 = function (nums) {
 //极端情况把a[i]赋值为a[i-1]则数列肯定是非递减数列
 //循环每个元素设置为a[i-1]后循环剩下元素是否为非递减数列即可
 //2.找索引p
+// [-1,4,2,3]
+// [3,4,2,3]
+// [4,2,3]
 var checkPossibility = function (nums) {
   let count = 0
   //p为nums[i]>nums[i+1]的索引位置
