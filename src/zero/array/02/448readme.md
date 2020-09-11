@@ -14,7 +14,7 @@
 * 遍历[1, n]，直接检索是否在数组中
 
 #### 题解
-``` 
+``` javascript
 var findDisappearedNumbers = (nums)=>{
     const ret = [];
     nums.forEach((it,i)=>{

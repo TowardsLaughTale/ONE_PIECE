@@ -27,7 +27,7 @@ nums[i] 是一个在0到49,999范围内的整数。
 * 取ret中最小值，即为最短连续子数组的长度
 
 #### 题解
-``` 
+``` javascript
 var findShortestSubArray = function(nums) {
     const duArr = [];
     const ret = [];
