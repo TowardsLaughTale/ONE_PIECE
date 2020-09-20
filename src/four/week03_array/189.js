@@ -20,12 +20,15 @@
  * 要求使用空间复杂度为 O(1) 的 原地 算法。
  * 
  * @thought 解题思路
- * 
+ * 题目要求空间复杂度O(1), 所以只能跳k个遍历
+ * @complex
+ * 时间复杂度 O(n)
+ * 空间复杂度 O(1)
  * @result 结果
  * Accepted
-35/35 cases passed (96 ms)
-Your runtime beats 70.28 % of javascript submissions
-Your memory usage beats 44.22 % of javascript submissions (38.8 MB)
+ * 35/35 cases passed (96 ms)
+ * Your runtime beats 70.28 % of javascript submissions
+ * Your memory usage beats 44.22 % of javascript submissions (38.8 MB)
  */
 
  /**
@@ -35,7 +38,6 @@ Your memory usage beats 44.22 % of javascript submissions (38.8 MB)
  */
 var rotate = function(nums, k) {
   const len = nums.length;
-  const m = k % len;
   let start = 0, count = 0;
   while(count < len) {
     let current = start;
